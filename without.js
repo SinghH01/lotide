@@ -17,7 +17,6 @@ const eqArrays = function(array1, array2) {
   return returnValue;
 };
 
-module.exports = without;
 
 // Function to print appropriate message
 const assertArraysEqual = function(array1, array2) {
@@ -42,6 +41,9 @@ const without = function(source, itemsToremove) {
   }
   return newArray;
 };
+
+
+module.exports = without;
 
 //TEST CODE
 console.log(without([1, 2, 3], [1])); // => [2, 3]
