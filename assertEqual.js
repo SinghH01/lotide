@@ -1,3 +1,4 @@
+// Compares two values to be equal or not
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,10 +7,5 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1,1);
-assertEqual("Hello","Hello");
-assertEqual("Hello","World");
-assertEqual(2,3);
-assertEqual(22,22);
+// Export function
+module.exports = assertEqual;
