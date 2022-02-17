@@ -17,6 +17,8 @@ const eqArrays = function(array1, array2) {
   return returnValue;
 };
 
+module.exports = without;
+
 // Function to print appropriate message
 const assertArraysEqual = function(array1, array2) {
   let comparisonResult = eqArrays(array1, array2);

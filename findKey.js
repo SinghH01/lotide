@@ -5,6 +5,7 @@ const assertEqual = function(actual, expected) {
     console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+module.exports = findKey;
 
 const findKey = function(object, callback) {
   let result = undefined;

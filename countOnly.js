@@ -22,6 +22,7 @@ const countOnly = function(allItems, itemsToCount) {
   return newObject;
 };
 
+module.exports = countOnly;
 
 
 // TEST CODE

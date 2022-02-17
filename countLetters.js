@@ -20,6 +20,8 @@ const countLetters = function(input) {
   return newObject;
 };
 
+module.exports = countLetters;
+
 //TEST CODE
 assertEqual(countLetters("LHL")["L"], 2);
 assertEqual(countLetters("Hello World")["l"], 3);

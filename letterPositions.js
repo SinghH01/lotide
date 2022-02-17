@@ -43,6 +43,7 @@ const lettterPositions = function(input) {
   return results;
 };
 
+module.exports = lettterPositions;
 
 //TEST CODE
 assertArraysEqual(lettterPositions("hello")["h"], [0]);

@@ -1,3 +1,5 @@
+const { builtinModules } = require("module");
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
@@ -52,6 +54,8 @@ const eqObjects = function(object1, object2) {
   }
   return result;
 };
+
+module.exports = eqObjects;
 
 
 // TEST CODE

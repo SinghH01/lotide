@@ -41,6 +41,7 @@ const takeUntil = function(array, callback) {
   return results;
 };
 
+module.exports = takeUntil;
 
 //TEST CODE
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];

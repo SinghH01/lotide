@@ -28,7 +28,6 @@ const assertArraysEqual = function(array1, array2) {
    
 };
 
-
 const map = function(array, callback) {
   let results = [];
   for (const item of array) {
@@ -36,6 +35,8 @@ const map = function(array, callback) {
   }
   return results;
 };
+
+module.exports = map;
 
 
 
