@@ -1,6 +1,6 @@
 // Import functions
 const assert = require('chai').assert;
-const tail   = require('../tail');
+const tail   = require('../index').tail;
 
 
 //TEST CODE

@@ -1,6 +1,6 @@
 // Import functions
 const assert = require('chai').assert;
-const head   = require('../head');
+const head   = require('../index').head;
 
 //TEST CODE
 describe("#head", () => {

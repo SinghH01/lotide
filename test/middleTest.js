@@ -1,5 +1,5 @@
 // Import functions
-const middle = require(`../middle`);
+const middle = require(`../index`).middle;
 const assert = require("chai").assert;
 
 
