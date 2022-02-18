@@ -1,10 +1,20 @@
-// Import assertEqual function
+// Import functions
+const assert = require('chai').assert;
 const assertEqual = require(`../assertEqual`);
 
 //TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1,1);
-assertEqual("Hello","Hello");
-assertEqual("Hello","World");
-assertEqual(2,3);
-assertEqual(22,22);
+
+describe('#assertEqual', () => {
+  it('returns false for "Lighthouse Labs", "Bootcamp"', () => {
+    assert.strictEqual(assertEqual("Lighthouse Labs", "Bootcamp"), false);
+  });
+  it('returns true for 1, 1', () => {
+    assert.strictEqual(assertEqual(1, 1), true);
+  });
+  it('returns true for "Hello", "Hello"', () => {
+    assert.strictEqual(assertEqual("Hello","Hello"), true);
+  });
+  it('returns false for 2, "2"', () => {
+    assert.strictEqual(assertEqual(2, "2"), false);
+  })  
+});
