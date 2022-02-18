@@ -1,31 +1,7 @@
-const { builtinModules } = require("module");
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-// Function to check if arrays are equal
-const eqArrays = function(array1, array2) {
-  let returnValue = false;
-  if (array1.length === array2.length) {
-    if (array1.length === 0) {
-      returnValue = true;
-    } else {
-      for (let i = 0; i < array1.length; i++) {
-        if (array1[i] === array2[i]) {
-          returnValue = true;
-        } else {
-          returnValue = false;
-        }
-      }
-    }
-  }
-  return returnValue;
-};
+//Import function
+const assertEqual = require('./assertEqual');
+const eqArrays = require('./eqArrays');
 
 
 // Function to compare objects

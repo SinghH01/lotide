@@ -1,33 +1,7 @@
-//Function to compare two arrays
-const eqArrays = function(array1, array2) {
-  let returnValue = false;
-  if (array1.length === array2.length) {
-    if (array1.length === 0) {
-      returnValue = true;
-    } else {
-      for (let i = 0; i < array1.length; i++) {
-        if (array1[i] === array2[i]) {
-          returnValue = true;
-        } else {
-          returnValue = false;
-        }
-      }
-    }
-  }
-  return returnValue;
-};
+//Import functions
+const assertArraysEqual = require('./assertArraysEqual');
 
-
-// Function to print appropriate message after comparing two array's
-const assertArraysEqual = function(array1, array2) {
-  let comparisonResult = eqArrays(array1, array2);
-  if (comparisonResult === true) {
-    console.log("✅ Both Array's are Equal");
-  } else {
-    console.log("❌ Both Array's are not Equal");
-  }
-   
-};
+//Takes in an array that contains elements including nested array of elements and returns a flattened version of the array
 const flatten = function(array) {
   const newArray = [];
   for (let i = 0; i < array.length; i++) {
@@ -44,10 +18,8 @@ const flatten = function(array) {
 
 module.exports = flatten;
 
-// TEST CODE
 
-// console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
-// console.log(flatten(["Hello",["my"], ["name",["is:"], "Harshbir Singh"]])); // => [ 'Hello', 'my', 'name', [ 'is:' ], 'Harshbir Singh' ]
+// TEST CODE
 
 assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 assertArraysEqual(flatten(["Hello",["my"], ["name",["is:"], "Harshbir Singh"]]), [ 'Hello', 'my', 'name', [ 'is:' ], 'Harshbir Singh' ]);

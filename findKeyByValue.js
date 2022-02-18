@@ -1,11 +1,7 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// Import assertEqual
+const assertEqual = require('./assertEqual');
 
+// Takes in an object and a value and returns the first key that corresponds to that value
 const findKeyByValue = function(inputObject, inputString) {
   let result;
   for (const keys in inputObject) {
@@ -19,6 +15,7 @@ const findKeyByValue = function(inputObject, inputString) {
 };
 
 module.exports = findKeyByValue;
+
 
 // TEST CODE
 const bestTVShowsByGenre = {

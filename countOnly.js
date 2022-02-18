@@ -1,11 +1,7 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// Import assertEqual
+const assertEqual = require('./assertEqual');
 
+//Takes in a collection of items and returns a specific subset of those items
 const countOnly = function(allItems, itemsToCount) {
   let newObject = {};
   for (const items of allItems) {
