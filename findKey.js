@@ -1,5 +1,5 @@
 //Import assertEqual to compare result
-const assertEqual = require('./index').assertEqual;
+const assertEqual = require('./assertEqual');
 
 //Takes in an object and callback and returns the first key that meets the criteria specified in callback
 const findKey = function(object, callback) {
@@ -14,8 +14,6 @@ const findKey = function(object, callback) {
 };
 
 module.exports = findKey;
-
-
 
 
 // TEST CODE
