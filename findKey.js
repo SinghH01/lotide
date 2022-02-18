@@ -1,16 +1,11 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+//Import assertEqual to compare result
+const assertEqual = require('./index').assertEqual;
 
+//Takes in an object and callback and returns the first key that meets the criteria specified in callback
 const findKey = function(object, callback) {
   let result = undefined;
   for (const item in object) {
     if (callback(object[item]) === true) {
-      console.log(item);
       result = item;
       break;
     }
